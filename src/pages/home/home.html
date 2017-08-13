@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+  <ion-buttons end>
+  	<button ion-button	icon-only (click)="onLoadNewPlace()">
+  		<ion-icon name="add-circle"></ion-icon>
+  	</button>
+  </ion-buttons>
+    <ion-title>
+      Awsome Places
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ <ion-list>
+ <button></button>
+  <ion-item 
+  		*ngFor="let place of places" 
+  		(click)="onOpenPlace(place)">{{ place.title }}</ion-item>
+ </ion-list>
+</ion-content>
